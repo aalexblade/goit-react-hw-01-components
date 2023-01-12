@@ -8,7 +8,7 @@ import {
 } from './Friends.styled';
 
 function getRandomColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+  return Math.random() > 0.5 ? 'green' : 'tomatto';
 }
 export const FriendListItem  = ({avatar,name,isOnline}) => { 
     return (
