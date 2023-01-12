@@ -1,118 +1,77 @@
 import styled from 'styled-components';
 
-export const UserAvatar = styled.img`
- border-radius: 50%;
-width: 180px;
-margin-bottom: 20px;
+export const ProfileContainer = styled.div`
+  background-color: #ffffff;
+  font-size: 18px;
+  border-radius: 4px;
+  /* box-shadow: 0px 1px 1px
+   rgba(0, 0, 0, 0.12),
+   0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16); */
+  width: 350px;
+  margin: auto;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.7);
 `;
-export const UserNickname = styled.p`
- color: #646464;
-margin-bottom: 12px;
+
+export const ProfileDescription = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  padding-bottom: 20px;
+  margin-top: 20px;
+  
+  
+`;
+
+export const UserName = styled.p`
+  font-size: 22px;
+  font-weight: 600;
+  margin: 8px 0;
+  padding-top: 16px;
+`;
+
+
+export const UserAvatar = styled.img`
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: solid;
+  `;
+
+export const UserTag = styled.p`
+  margin: 8px 0;
+  color: #999999;
 `;
 export const UserLocation = styled.p`
- color: #646464;
-margin-bottom: 12px;
+  margin: 8px 0;
+  color: #999999;
 `;
-export const UserName = styled.p`
- font-size: 24px;
-font-weight: 600;
-margin-bottom: 12px;
+export const StatsContainer = styled.ul`
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+   width: 350px;
+  margin: auto;
+  /* box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.7); */
 `;
-export const StatsLable = styled.span`
- color: #646464;
-`;
-export const StatsQuantity = styled.span` 
-font-size: 24px;
-font-weight: 600;
-`;
+
 export const StatsItem = styled.li`
- display: flex;
-flex-direction: column;
-text-align: center;
-padding: 10px;
-border: 1px solid #a8a8a8;
-width: calc(100% / 3);
-`;
-export const StatsList = styled.ul`
-display: flex;
-background-color: #dedede;
-`;
-export const DescrWrapper = styled.div`
-text-align: center;
-padding: 20px;
-`;
-export const ProfileWrapper = styled.div`
-width: 350px;
-margin: 10px;
-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 34px;
+  background-color: #2323;
+  border: 1px solid rgb(0 0 0 / 12%);
 `;
 
+export const StatsText = styled.span`
+  color: #686868;
+  font-size: 16px;
+`;
 
-/* .stats {
-
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 40px;
-    margin: 0 0;
-    padding: 0 0;
-}
-
-.itemList {
-    background-color: #f3f6f9;
-    border: solid;
-    margin: 0 0;
-    padding: 60px 0px 60px;
-    font-size: 20px;
-    text-align: center;
-    width: 250px;
-}
-
-.profile {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-
-    border: solid;
-
-    width: 450px;
-    margin-bottom: 50px;
-    position: relative;
-    top: 50%;
-    left: 40%;
-}
-
-.description {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-    height: 450px;
-}
-
-.quantity {
-    font-weight: bold;
-}
-
-.name {
-    font-weight: bold;
-}
-
-.imgLogo {
-
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    border: solid;
-}
-
-.avatar {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-
-} */
+export const StatsQuantity = styled.span`
+  font-weight: 500;
+`;

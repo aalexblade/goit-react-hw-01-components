@@ -1,38 +1,28 @@
 
-import { Profile } from './Profile/Profile'
-import { Statistics } from './Statistics/Statistics';
-
-
-
 
 import user from '../data/user.json';
 import data from '../data/data.json';
+import friends from '../data/friends.json';
+import { Profile } from './Profile/Profile';
+import { Statistics } from './Statistics/Statistics';
+import { FriendList } from './FriendList/FriendList';
+
+
+
 
 export const App = () => {
-  return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        padding: 40,
-        gap: 60,
-        flexDirection: 'column',
-        fontSize: 22,
-        color: '#010101',
-        backgroundColor: '#0101',
-      }}
-    >
+    return (
+    <>
       <Profile
-        avatar={user.avatar}
+        
         username={user.username}
         tag={user.tag}
         location={user.location}
+        avatar={user.avatar}
         stats={user.stats}
       />
-      <Statistics title="Upload stats" stats={data} />
-      {/* <Statistics stats={data} /> */}
-     
-    </div>
+        <Statistics title="Upload stats" stats={data} />
+        <FriendList friends={friends} />
+    </>
   );
 };

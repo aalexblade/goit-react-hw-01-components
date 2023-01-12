@@ -1,28 +1,35 @@
+
+import PropTypes from 'prop-types'; 
+
 import {
-  StatisticsContainer,
-  Title,
-  StatList,
-  Item,
-} from './Statistics.styled';
-import PropTypes from 'prop-types';
+    StatContainer,
+    Title,
+    StatList,
+    StatItem,
+    
+} from './Statistics.styled'
 
-export const Statistics = ({ title, stats }) => {
-  return (
-    <StatisticsContainer>
-      {title && <Title>{title}</Title>}
+function getRandomColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+}
 
-      <StatList>
-        {stats.map(stat => {
-          return (
-            <Item key={stat.id} style={{ backgroundColor: getRandomColor() }}>
-              <span>{stat.label}</span>
-              <span>{stat.percentage}%</span>
-            </Item>
-          );
-        })}
-      </StatList>
-    </StatisticsContainer>
-  );
+export const Statistics = ({title, stats }) => { 
+    return (
+        <StatContainer>
+            {title && <Title>{title}</Title>}
+
+            <StatList>
+                {stats.map(stat => {
+                    return (
+                        <StatItem key={stat.id} style={{backgroundColor: getRandomColor()}}>
+                            <span>{stat.label}</span>
+                            <span>{stat.percentage}%</span>
+                        </StatItem>
+                    );
+               })}
+            </StatList>
+        </StatContainer>
+    );
 };
 
 Statistics.propTypes = {
@@ -33,9 +40,14 @@ Statistics.propTypes = {
       label: PropTypes.string.isRequired,
       percentage: PropTypes.number.isRequired,
     })
-  ).isRequired,
+  ),
 };
 
-function getRandomColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-}
+
+
+
+
+
+
+
+
